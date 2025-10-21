@@ -1,0 +1,2 @@
+start node = node src/backend/server.js
+start react =  npm run dev

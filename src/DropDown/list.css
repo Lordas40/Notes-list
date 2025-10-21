@@ -1,0 +1,162 @@
+#root {
+    height: 99vh;
+    width: 85vh;
+    /*background-color: antiquewhite;*/
+    display: flex;
+    justify-content: center;
+}
+body{
+    background-color: white;
+    color: black;
+    display: flex;
+    justify-content: center;
+    margin: 0;
+}
+.mainNoteDiv{
+    border: 2px solid black;
+    display: flex;
+    flex-direction: column;
+    height: 100%;
+    width: 100%;
+    justify-content: space-between; 
+    background-image: linear-gradient(130deg, #e2e7ec85, #ddf0eb85, #e2ece185);
+}
+    .mainNoteDiv h1 {
+        background-image: linear-gradient(110deg, #ece2e2c0, #e2ece1c0);
+        font-family: Young serif;
+        margin-top: 0;
+        height: 10vh;
+        width: 70%;
+        align-self: center;
+        font-size: 2.2em;
+        text-align: center;
+        display: flex;
+        justify-content: center; 
+        align-items: center;
+        border-bottom-left-radius:10px ;
+        border-bottom-right-radius:10px ;
+        text-shadow: 1px 0.5px 1px rgba(0, 0, 0, 0.5);
+        box-shadow: 2px 1px 2px black;
+        border: 1px solid rgba(0, 0, 0, 0.2);
+    }
+
+    .bothLists{
+       background-color: aliceblue;
+       border-top:2px solid #000000 ;
+       border-bottom:2px solid black ;
+       display: inline-flex;
+       justify-content: space-around;
+       align-items: center;
+       height: 50vh;
+       
+    }
+    .listDiv {
+        display: flex;
+        flex-direction: column;
+        height: 40vh;
+        justify-content: flex-start;
+
+        overflow-x: 45%; 
+        max-width: 40%;
+        scroll-behavior: smooth;
+    }
+    .listItem{
+        border-radius: 5px;
+    }
+        .toDoHelement {
+            font-size: 1.5em;
+            font-family: Young serif;
+            margin: 5px;
+        }
+        .toDoOl{
+            font-size: 1.3em;
+            font-family:'Times New Roman', Times, serif;
+            scroll-behavior: smooth;
+            margin: 5px;
+
+            max-height: 20vh;   
+            overflow-y: auto;  
+            padding-right: 10px;
+            flex-grow: 1; 
+            
+        }
+        .listButton{
+            padding: 0;
+            background-color: transparent;
+            border: none;
+            outline: none;        
+        }
+        .taskDiv{
+            font-size: 1.5em;
+            display: flex;
+            gap: 5px;
+
+            flex-shrink: 0;
+        }
+        .taskInput{
+            width: 30vh;
+            height: 4vh;
+            background-color: whitesmoke;
+            color: black;
+            border-radius: 10px;
+            border: 2px solid rgb(68, 67, 80);
+            outline: none;
+        }
+            .taskInput:focus{
+                border: 1px solid rgb(32, 107, 11);
+                border-bottom: 4px solid green;
+                font-size: 0.8em;
+            }
+footer {
+    background-image: linear-gradient(60deg, #ece2e2c0, #e2ece1c0);
+    font-family: 'Times New Roman', Times, serif;
+    font-size: 1.1em;
+    height: 15%;
+    display:flex;
+    flex-direction: column;
+    justify-content: space-between;
+    padding-left: 15px;
+    padding-right: 15px;
+    box-shadow: 0 -2px 5px black;
+    
+}
+    .footerInfo{
+        display: inline-flex;
+        justify-content: space-between;
+        padding-top: 15px;
+    }
+    .date{
+        display: flex;
+        justify-content: center;
+        align-items: center;
+    }
+    .creatorNote p, .date p, .contactNote p {
+       padding: 0;
+       margin: 0;
+    }
+
+@media (max-width: 900px) {
+    .mainNoteDiv{
+        height: 100%;
+        width: 100%;
+        overflow-y: auto;  
+
+    }
+    .bothLists {
+        flex-direction: column;
+        align-items: center;
+        height: 80%;
+        gap: 15px;
+    }
+
+    .listDiv {
+        max-width: 90%;
+        width: 90%;
+        overflow-x: auto;
+        padding-top: 5px;
+    }
+
+    .taskInput {
+        width: 100%;
+    }
+}
